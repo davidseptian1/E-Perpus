@@ -56,10 +56,7 @@
                                 @else 
                                     <span class="badge bg-fuchsia">Sedang Dipinjam</span>
                                 @endif
-</td>
-
-
-                            
+                            </td>               
                             <td>
                                     <button wire:click="hapus({{$keranjang->id}}, {{$item->id}})" class="btn btn-sm btn-danger">Hapus</button>
                             </td>

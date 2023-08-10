@@ -69,6 +69,7 @@
 
                 <button wire:click="keranjang({{$buku->id}})" class="btn btn-success">Keranjang</button>
             </div>
+            <embed type="application/PDF" src="/storage/buku/naruto-58.pdf" width="100%" height="1400"></embed>
         </div>
 
     @else
