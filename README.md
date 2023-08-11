@@ -7,7 +7,7 @@ Laravel 8 pepustakaan dibuat oleh :
 -Rofi Nabhan
 -Defit Septian
 -Beni Andriansyah
--Bale
+-Mohamad Iqbal Ramadhan
 
 ## Fitur 
 
