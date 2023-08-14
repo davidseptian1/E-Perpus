@@ -64,7 +64,7 @@
                                 @if ($item->peminjaman->status == 1)
                                     <span class="badge bg-fuchsia">Belum Dikembalikan</span>
                                 @elseif ($item->peminjaman->status == 2)
-                                    <a href="{{$item->buku->pdf}}" target="_blank" class="btn btn-primary">Lihat PDF</a>
+                                    <a href="{{$item->buku->pdf}}" target="_blank" style="width:100px; height:30px; margin-top:0px;padding-top:5px" class="btn btn-primary">Lihat PDF</a>
                                 @elseif ($item->peminjaman->status == 3)
                                     <span class="badge bg-fuchsia">Sudah Dikembalikan</span>
                                 @else 

@@ -64,9 +64,9 @@
                                 @endforeach
                             </ul>
                         </td> -->
-                        <!-- <td>{{$item->tanggal_pinjam}}</td>
+                        <td>{{$item->tanggal_pinjam}}</td>
                         <td>{{$item->tanggal_kembali}}</td>
-                        <td>{{$item->denda}}</td> -->
+                        <td>{{$item->denda}}</td>
                         <td>
                             @if ($item->status == 1)
                                 <span class="badge bg-indigo">Belum Dibaca</span>

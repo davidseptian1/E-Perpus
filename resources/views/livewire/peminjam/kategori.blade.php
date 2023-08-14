@@ -6,24 +6,27 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
             <span class="navbar-toggler-icon"></span>
         </button>
-
+        
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav mr-auto">
-                 <li class="nav-item dropdown">
-                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                            Kategori
-                        </a>
+    @if (request()->path() !== 'keranjang')
+        <li class="nav-item dropdown">
+            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                Kategori
+            </a>
 
-                        <div class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdown" style="cursor: pointer">
-                            <a class="dropdown-item" wire:click="semuaKategori">Semua Kategori</a>
-                            <div class="dropdown-divider"></div>
-                            @foreach ($kategori as $item)
-                                <a class="dropdown-item" wire:click="pilihKategori({{$item->id}})">{{$item->nama}}</a>
-                            @endforeach
-                        </div>
-                    </li>
-            </ul>
+            <div class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdown" style="cursor: pointer">
+                <a class="dropdown-item" wire:click="semuaKategori">Semua Kategori</a>
+                <div class="dropdown-divider"></div>
+                @foreach ($kategori as $item)
+                    <a class="dropdown-item" wire:click="pilihKategori({{$item->id}})">{{$item->nama}}</a>
+                @endforeach
+            </div>
+        </li>
+    @endif
+</ul>
+
 
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ml-auto">
