@@ -24,6 +24,7 @@ class CreateBukuTable extends Migration
             $table->foreignId('rak_id');
             $table->integer('stok');
             $table->timestamps();
+            $table->string('pdf')->nullable(); // Menambahkan kolom baru pdf
         });
     }
 

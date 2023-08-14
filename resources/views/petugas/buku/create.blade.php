@@ -35,6 +35,11 @@
                         <input wire:model="sampul" type="file" class="form-control" id="sampul" min="1">
                         @error('sampul') <small class="text-danger">{{ $message }}</small> @enderror
                     </div>
+                    <div class="form-group">
+                        <label for="pdf">PDF File</label>
+                        <input wire:model="pdf" type="file" class="form-control" id="pdf" min="1">
+                        @error('pdf') <small class="text-danger">{{ $message }}</small> @enderror
+                    </div>
                     <div class="row">
                         <div class="col-md-4">
                             <div class="form-group">

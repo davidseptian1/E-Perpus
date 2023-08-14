@@ -22,12 +22,15 @@ class Buku extends Component
     public $kategori, $rak, $penerbit;
     public $kategori_id, $rak_id, $penerbit_id, $baris;
     public $judul, $stok, $penulis, $sampul, $buku_id, $search;
+    public $pdf;
 
     protected $rules = [
         'judul' => 'required',
         'penulis' => 'required',
         'stok' => 'required|numeric|min:1',
         'sampul' => 'required|image|max:1024',
+
+        'pdf' => 'required|file|mimes:pdf',
         'kategori_id' => 'required|numeric|min:1',
         'rak_id' => 'required|numeric|min:1',
         'penerbit_id' => 'required|numeric|min:1',
@@ -38,7 +41,10 @@ class Buku extends Component
         'rak_id' => 'rak',
         'penerbit_id' => 'penerbit',
     ];
-
+public function mount()
+    {
+        $this->pdf = null;
+    }
     public function pilihKategori()
     {
         $this->rak = Rak::where('kategori_id', $this->kategori_id)->get();
@@ -55,12 +61,23 @@ class Buku extends Component
 
     public function store()
     {
-        $this->validate();
-
+        $this->validate([
+            'judul' => 'required',
+            'penulis' => 'required',
+            'stok' => 'required|numeric|min:1',
+            'sampul' => 'required|image|max:1024',
+            'pdf' => 'required|file|mimes:pdf',
+            'kategori_id' => 'required|numeric|min:1',
+            'rak_id' => 'required|numeric|min:1',
+            'penerbit_id' => 'required|numeric|min:1',
+        ]);
+    
         $this->sampul = $this->sampul->store('buku', 'public');
-
+        $this->pdf = $this->pdf->store('buku','public');
+    
         ModelsBuku::create([
             'sampul' => $this->sampul,
+            'pdf' => $this->pdf,
             'judul' => $this->judul,
             'penulis' => $this->penulis,
             'stok' => $this->stok,
@@ -69,7 +86,7 @@ class Buku extends Component
             'penerbit_id' => $this->penerbit_id,
             'slug' => Str::slug($this->judul)
         ]);
-
+    
         session()->flash('sukses', 'Data berhasil ditambahkan.');
         $this->format();
     }
@@ -81,6 +98,7 @@ class Buku extends Component
         $this->show = true;
         $this->judul = $buku->judul;
         $this->sampul = $buku->sampul;
+        $this->pdf =$buku->pdf;
         $this->penulis = $buku->penulis;
         $this->stok = $buku->stok;
         $this->kategori = $buku->kategori->nama;
@@ -181,6 +199,7 @@ class Buku extends Component
     public function format()
     {
         unset($this->create);
+        unset($this->pdf);
         unset($this->delete);
         unset($this->edit);
         unset($this->show);

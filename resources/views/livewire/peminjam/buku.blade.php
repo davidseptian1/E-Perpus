@@ -64,12 +64,23 @@
                       <td>:</td>
                       <td>{{$buku->stok}}</td>
                     </tr>
+                    <tr>
+    <th>PDF</th>
+    <td>:</td>
+    <td>
+        @if ($buku->pdf)
+            <a href="/storage/{{$buku->pdf}}" target="_blank">Buka PDF</a>
+        @else
+            Tidak ada file PDF
+        @endif
+    </td>
+</tr>
                   </tbody>
                 </table>
 
-                <button wire:click="keranjang({{$buku->id}})" class="btn btn-success">Keranjang</button>
+                <button wire:click="keranjang({{$buku->id}})" class="btn btn-success">Keranjang</button> 
             </div>
-            <embed type="application/PDF" src="/storage/buku/naruto-58.pdf" width="100%" height="1400"></embed>
+            
         </div>
 
     @else
