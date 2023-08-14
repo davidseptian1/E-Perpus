@@ -53,6 +53,11 @@
                                         <td>:</td>
                                         <td>{{$stok}}</td>
                                     </tr>
+                                    <tr>
+                                        <th>pdf</th>
+                                        <td>:</td>
+                                        <td><a href="{{$pdf}}">{{$pdf}}</td>
+                                    </tr>
                                 </tbody>
                             </table>
                          </div>

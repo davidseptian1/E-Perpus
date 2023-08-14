@@ -49,7 +49,7 @@
                       <td>:</td>
                       <td>{{$buku->penerbit->nama}}</td>
                     </tr>
-                    <tr>
+                    <!-- <tr>
                       <th>Rak</th>
                       <td>:</td>
                       <td>{{$buku->rak->rak}}</td>
@@ -64,15 +64,23 @@
                       <td>:</td>
                       <td>{{$buku->stok}}</td>
                     </tr>
-                    <tr>
-                      <th>Buku</th>
-                      <td>:</td>
-                      <td><a href="{{$buku->pdf}}">{{$buku->pdf}}<a></td>
-                    </tr>
+                    <tr> -->
+                <th>PDF</th>
+                <td>:</td>
+                <td>
+                    @if ($buku->pdf)
+                        Buku dapat dibaca
+                    @else
+                        Tidak ada file PDF
+                    @endif
+                </td>
+            </tr>
                   </tbody>
                 </table>
 
                 <button wire:click="keranjang({{$buku->id}})" class="btn btn-success">Keranjang</button>
+                <!-- <a href="/storage/{{$buku->pdf}}" target="_blank" class="btn btn-primary">Lihat PDF</a> -->
+
             </div>
         </div>
 

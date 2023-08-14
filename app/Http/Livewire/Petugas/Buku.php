@@ -87,6 +87,7 @@ class Buku extends Component
         $this->penerbit = $buku->penerbit->nama;
         $this->rak = $buku->rak->rak;
         $this->baris = $buku->rak->baris;
+        $this->pdf = $buku->pdf;
     }
 
     public function edit(ModelsBuku $buku)

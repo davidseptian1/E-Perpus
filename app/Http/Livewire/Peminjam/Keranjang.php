@@ -45,7 +45,7 @@ class Keranjang extends Component
     $this->validate();
 
     $keranjang->update([
-        'status' => 1,
+        'status' => 2,
         'tanggal_pinjam' => $this->tanggal_pinjam,
         'tanggal_kembali' => Carbon::create($this->tanggal_pinjam)->addDays(10)
     ]);

@@ -36,7 +36,7 @@
                         @error('sampul') <small class="text-danger">{{ $message }}</small> @enderror
                     </div>
                     <div class="row">
-                        <div class="col-md-4">
+                        <div class="col-md-6">
                             <div class="form-group">
                                 <label for="kategori">Kategori</label>
                                 <select wire:model="kategori_id" wire:click="pilihKategori" class="form-control" id="kategori">
@@ -50,7 +50,7 @@
                                 @error('kategori_id') <small class="text-danger">{{ $message }}</small> @enderror
                             </div>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-6">
                             <div class="form-group">
                                 <label for="penerbit">Penerbit</label>
                                 <select wire:model="penerbit_id" class="form-control" id="penerbit">
@@ -62,7 +62,7 @@
                                 @error('penerbit_id') <small class="text-danger">{{ $message }}</small> @enderror
                             </div>
                         </div>
-                        <div class="col-md-4">
+                        <!-- <div class="col-md-4">
                             <div class="form-group">
                                 <label for="rak">Rak</label>
                                 <select wire:model="rak_id" class="form-control" id="rak">
@@ -73,7 +73,7 @@
                                 </select>
                                 @error('rak_id') <small class="text-danger">{{ $message }}</small> @enderror
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <div class="modal-footer justify-content-between">
