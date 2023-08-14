@@ -23,6 +23,7 @@ class CreateBukuTable extends Migration
             $table->foreignId('kategori_id');
             $table->foreignId('rak_id');
             $table->integer('stok');
+            $table->string('pdf');
             $table->timestamps();
         });
     }

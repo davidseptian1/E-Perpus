@@ -5,14 +5,14 @@
 
     <div class="btn-group mb-3">
         <button wire:click="format" class="btn btn-sm bg-teal mr-2">Semua</button>
-        <button wire:click="belumDipinjam" class="btn btn-sm bg-indigo mr-2">Belum Dipinjam</button>
-        <button wire:click="sedangDipinjam" class="btn btn-sm bg-olive mr-2">Sedang Dipinjam</button>
-        <button wire:click="selesaiDipinjam" class="btn btn-sm bg-fuchsia mr-2">Selesai Dipinjam</button>
+        <button wire:click="belumDipinjam" class="btn btn-sm bg-indigo mr-2">Belum Dibaca</button>
+        <button wire:click="sedangDipinjam" class="btn btn-sm bg-olive mr-2">Sedang Dibaca</button>
+        <button wire:click="selesaiDipinjam" class="btn btn-sm bg-fuchsia mr-2">Selesai Dibaca</button>
     </div>
 
     <div class="card">
         <div class="card-header">
-        <span wire:click="create" class="btn btn-sm btn-primary">Tambah</span>
+        <!-- <span wire:click="create" class="btn btn-sm btn-primary">Tambah</span> -->
 
             <div class="card-tools">
                 <div class="input-group input-group-sm" style="width: 150px;">
@@ -35,14 +35,14 @@
                     <th width="10%">No</th>
                     <th>Kode Pinjam</th>
                     <th>Buku</th>
-                    <th>Lokasi</th>
-                    <th>Tanggal Pinjam</th>
-                    <th>Tanggal Kembali</th>
-                    <th>Denda</th>
+                    <!-- <th>Lokasi</th> -->
+                    <!-- <th>Tanggal Pinjam</th> -->
+                    <!-- <th>Tanggal Kembali</th> -->
+                    <!-- <th>Denda</th> -->
                     <th>Status</th>
-                   @if (!$selesai_dipinjam)
+                   <!-- @if (!$selesai_dipinjam)
                         <th width="15%">Aksi</th>
-                   @endif
+                   @endif -->
                 </tr>
                 </thead>
                 <tbody>
@@ -57,26 +57,26 @@
                                 @endforeach
                             </ul>
                         </td>
-                       <td>
+                       <!-- <td>
                             <ul>
                                 @foreach ($item->detail_peminjaman as $detail_peminjaman)
                                 <li>{{$detail_peminjaman->buku->rak->lokasi}}</li>
                                 @endforeach
                             </ul>
-                        </td>
-                        <td>{{$item->tanggal_pinjam}}</td>
+                        </td> -->
+                        <!-- <td>{{$item->tanggal_pinjam}}</td>
                         <td>{{$item->tanggal_kembali}}</td>
-                        <td>{{$item->denda}}</td>
+                        <td>{{$item->denda}}</td> -->
                         <td>
                             @if ($item->status == 1)
-                                <span class="badge bg-indigo">Belum Dipinjam</span>
+                                <span class="badge bg-indigo">Belum Dibaca</span>
                             @elseif ($item->status == 2)
-                                <span class="badge bg-olive">Sedang Dipinjam</span>
+                                <span class="badge bg-olive">Sedang Dibaca</span>
                             @else
-                                <span class="badge bg-fuchsia">Selesai Dipinjam</span>
+                                <span class="badge bg-fuchsia">Selesai Dibaca</span>
                             @endif
                         </td>
-                       @if (!$selesai_dipinjam)
+                       <!-- @if (!$selesai_dipinjam)
                             <td>
                                 @if ($item->status == 1)
                                     <span wire:click="pinjam({{$item->id}})" class="btn btn-sm btn-success mr-2">Pinjam</span>
@@ -84,7 +84,7 @@
                                     <span wire:click="kembali({{$item->id}})" class="btn btn-sm btn-primary mr-2">Kembali</span>
                                 @endif
                             </td>
-                       @endif
+                       @endif -->
                     </tr>
                 @endforeach
                 </tbody>

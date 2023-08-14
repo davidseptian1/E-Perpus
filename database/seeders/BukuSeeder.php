@@ -23,7 +23,8 @@ class BukuSeeder extends Seeder
             'penerbit_id' => 2,
             'kategori_id' => 2,
             'rak_id' => 2,
-            'stok' => 10
+            'stok' => 10,
+            'pdf' => "naruto_vol_71.pdf"
         ]);
 
         Buku::create([
@@ -34,7 +35,8 @@ class BukuSeeder extends Seeder
             'penerbit_id' => 3,
             'kategori_id' => 2,
             'rak_id' => 3,
-            'stok' => 10
+            'stok' => 10,
+            'pdf' => "naruto_vol_71.pdf"
         ]);
 
         Buku::create([
@@ -45,7 +47,8 @@ class BukuSeeder extends Seeder
             'penerbit_id' => 2,
             'kategori_id' => 2,
             'rak_id' => 4,
-            'stok' => 10
+            'stok' => 10,
+            'pdf' => "naruto_vol_71.pdf"
         ]);
 
         Buku::create([
@@ -56,7 +59,8 @@ class BukuSeeder extends Seeder
             'penerbit_id' => 2,
             'kategori_id' => 3,
             'rak_id' => 7,
-            'stok' => 10
+            'stok' => 10,
+            'pdf' => "naruto_vol_71.pdf"
         ]);
 
         Buku::create([
@@ -67,7 +71,8 @@ class BukuSeeder extends Seeder
             'penerbit_id' => 2,
             'kategori_id' => 3,
             'rak_id' => 8,
-            'stok' => 10
+            'stok' => 10,
+            'pdf' => "naruto_vol_71.pdf"
         ]);
 
         Buku::create([
@@ -78,7 +83,8 @@ class BukuSeeder extends Seeder
             'penerbit_id' => 3,
             'kategori_id' => 6,
             'rak_id' => 12,
-            'stok' => 10
+            'stok' => 10,
+            'pdf' => "naruto_vol_71.pdf"
         ]);
 
         Buku::create([
@@ -89,7 +95,8 @@ class BukuSeeder extends Seeder
             'penerbit_id' => 3,
             'kategori_id' => 6,
             'rak_id' => 13,
-            'stok' => 10
+            'stok' => 10,
+            'pdf' => "naruto_vol_71.pdf"
         ]);
     }
 }

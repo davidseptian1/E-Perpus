@@ -25,7 +25,7 @@
               <div class="inner">
                 <h3>{{$count_user}}</h3>
 
-                <p>Peminjam</p>
+                <p>Pembaca</p>
               </div>
               <div class="icon">
                 <i class="fas fa-users"></i>
@@ -39,7 +39,7 @@
               <div class="inner">
                 <h3>{{$count_selesai_dipinjam}}</h3>
 
-                <p>Selesai Dipinjam</p>
+                <p>Selesai Dibaca</p>
               </div>
               <div class="icon">
                  <i class="far fa-check-circle"></i>
@@ -53,7 +53,7 @@
               <div class="inner">
                 <h3>{{$count_sedang_dipinjam}}</h3>
 
-                <p>Sedang Dipinjam</p>
+                <p>Sedang Dibaca</p>
               </div>
               <div class="icon">
                 <i class="far fa-clock"></i>
@@ -130,7 +130,7 @@
           <div class="col-md-6">
             <div class="card">
               <div class="card-body">
-                <h5>Selesai Dipinjam</h5>
+                <h5>Selesai Dibaca</h5>
                  <table class="table table-bordered">
                   <thead>
                     <tr>
@@ -155,7 +155,7 @@
           <div class="col-md-6">
             <div class="card">
               <div class="card-body">
-                <h5>Sedang Dipinjam</h5>
+                <h5>Sedang Dibaca</h5>
                  <table class="table table-bordered">
                   <thead>
                     <tr>

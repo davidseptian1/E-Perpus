@@ -9,7 +9,7 @@ var myChart = new Chart(ctx, {
             @endforeach
         ],
         datasets: [{
-            label: 'Selesai Dipinjam',
+            label: 'Selesai Dibaca',
             data: [
                 @foreach ($count as $item)
                     {{$item}},
@@ -36,7 +36,7 @@ Livewire.on('ubahBulanTahun', (count, tanggal_pengembalian) => {
         data: {
             labels: tanggal_pengembalian,
             datasets: [{
-                label: 'Selesai Dipinjam',
+                label: 'Selesai Dibaca',
                 data: count,
                 backgroundColor: '#f012be',
                 borderWidth: 1
