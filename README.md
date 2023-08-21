@@ -45,7 +45,7 @@ Laravel 8 pepustakaan dibuat oleh :
 **Clone Repository**
 
 ```bash
-git clone https://github.com/musyahya/laravel8_perpustakaan.git
+git clone https://github.com/davidseptian1/E-Perpus.git
 ```
 
 **Download zip**
@@ -112,7 +112,7 @@ php artisan storage:link
 ## Download Asset Buku
 
 ```bash
-https://drive.google.com/drive/folders/1bCEhRhFVnTiRG9YhibUz2lLwFC6SIFNW?usp=sharing
+https://drive.google.com/drive/folders/10CTmwNNokPMsB9gFvsTmvZtxvJZSTrxv
 ```
 
 ## Buat Folder buku di public dan copy asetnya
@@ -127,4 +127,4 @@ php artisan serve
 ## Contributing
 
 Contributions, issues and feature requests di persilahkan.
-Jangan ragu untuk memeriksa halaman masalah jika Anda ingin berkontribusi. **Berhubung Project ini saya sudah selesaikan sendiri, namun banyak fitur yang kalian dapat tambahkan silahkan berkontribusi yaa!**
+Jangan ragu untuk memeriksa halaman masalah jika Anda ingin berkontribusi.
